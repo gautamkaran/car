@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5e63;
+}
+
+.btn {
+  background-color: #ff5e63;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff3366;
+}
+
+#hero {
+  /* height: 100vh;
+  background-image: url('images/bacground.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: rgba(0, 0, 0, 0.6) url('images/background.webp') no-repeat center center/cover;
+    height: 100vh;
+    color: #ffffff; /* White text for better contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin: 10px 0;
+  /* font-weight: bold; */
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 10px 0;
+ 
+}
+
+.phone {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .phone {
+    font-size: 16px;
+  }
+}
+
+
+/* Contact Toggle Button and Menu */
+.contact-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.contact-icon {
+  background-color: #ff5e63;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-icon:hover {
+  background-color: #ff3366;
+}
+
+.contact-menu {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.contact-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+.contact-menu a:hover {
+  background-color: #ff5e63;
+  color: white;
+}
+
+.contact-menu a:last-child {
+  border-bottom: none;
+}
+
+
+/* Services */
+#services {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.service-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-card h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Vehicles */
+#vehicles {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.vehicles-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.vehicle-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  transition: transform 0.3s ease-out;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.vehicle-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* booking */
+#booking {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.booking-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.whatsapp-booking, .form-booking {
+    width: 45%;
+}
+
+.whatsapp-booking .btn, .form-booking button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form-booking form input, .form-booking form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-booking form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Contact */
+#contact {
+  padding: 60px 30px;
+ 
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-form h2,
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff5e63;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles */
+  .hero-content {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .service-container,
+  .vehicles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card,
+  .vehicle-card {
+    width: 90%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    margin-right: 0;
+  }
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer .footer-links {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-links ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer .footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer .footer-links ul li a:hover {
+  color: #ff5e63;
+}
+
+.footer .social-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .social-links a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #ff5e63;
+}
+
+.footer .copyright {
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 20px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+}
